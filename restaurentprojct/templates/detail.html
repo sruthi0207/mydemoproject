@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block body %}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <img src="{{rest.img.url}}" width="100" height="150"/>
+        </div>
+
+    <div class="col-md-3">
+        <h2>{{rest.name}}</h2>
+        <h5>{{rest.desc}}</h5>
+        <h6>{{rest.flavour}}</h6>
+      <a class="btn btn-warning" href="{% url 'restapp:update' rest.id %}">Update</a>
+      <a class="btn btn-warning" href="{% url 'restapp:delete' rest.id %}">Delete</a>
+     </div>
+   </div>
+</div>
+{% endblock %}
